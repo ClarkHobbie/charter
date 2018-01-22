@@ -2,16 +2,19 @@ package test.poker;
 
 import java.util.List;
 
+/**
+ * A sequence of cards of differing siuts.
+ */
 public class Straight extends RepresentativeHand {
     public Straight (List<Card> cards) {
         super(cards);
     }
 
     public static boolean matches (List<Card> cards) {
-        Card last = cards.get(cards.size() - 1);
-        int lastValue = last.getRank().getValue();
+        Card first = cards.get(0);
+        int firstValue = first.getRank().getValue();
 
-        for (int i = lastValue; i < lastValue + 5; i++) {
+        for (int i = firstValue; i < firstValue + 5; i++) {
             if (!containsRankValue(i, cards)) {
                 return false;
             }

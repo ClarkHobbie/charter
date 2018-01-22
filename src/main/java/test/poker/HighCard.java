@@ -2,6 +2,9 @@ package test.poker;
 
 import java.util.List;
 
+/**
+ * A hand where the owner doesn't have anything.
+ */
 public class HighCard extends RepresentativeHand {
     private Card highCard;
 

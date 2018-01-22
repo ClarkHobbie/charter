@@ -2,6 +2,11 @@ package test.poker;
 
 import java.util.List;
 
+/**
+ * A {@link PokerHand} that can be represented by a single card.
+ * For example, three eigths would be represented by one of the eights,
+ * a straight of 5,6,7,8,9 would be represented by the nine.
+ */
 abstract public class RepresentativeHand extends PokerHand {
 
     protected abstract Card basicGetRepresentative();

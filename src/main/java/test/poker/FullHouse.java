@@ -3,6 +3,9 @@ package test.poker;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A {@link RepresentativeHand} that represents three of a kind and a pair
+ */
 public class FullHouse extends RepresentativeHand {
     public FullHouse (List<Card> cards) {
         super(cards);

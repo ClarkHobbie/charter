@@ -2,6 +2,9 @@ package test.poker;
 
 import java.util.List;
 
+/**
+ * A {@link RepresentativeHand} that represents a Flush.
+ */
 public class Flush extends RepresentativeHand {
 
     public Flush (List<Card> cards) {

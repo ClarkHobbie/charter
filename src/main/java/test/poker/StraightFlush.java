@@ -2,6 +2,9 @@ package test.poker;
 
 import java.util.List;
 
+/**
+ * A straight that is also a flush.
+ */
 public class StraightFlush extends PokerHand {
     public StraightFlush(List<Card> cards) {
         super(cards);

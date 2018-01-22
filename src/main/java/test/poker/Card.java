@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * A class that represents a single playing Card.
+ */
 public class Card {
     public static class CardComparator implements Comparator<Card> {
         public int compare(Card c1, Card c2) {

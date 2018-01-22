@@ -1,7 +1,14 @@
 package test.poker;
 
-import com.ltsllc.common.commadline.CommandLine;
+import com.ltsllc.common.commandline.CommandLine;
 
+/**
+ * A class that represents the poker command line.
+ *
+ * <p>
+ *     The point of this class is weather to rank suits.
+ * </p>
+ */
 public class GameCommandLine extends CommandLine {
     public enum Options {
         Unknown(1 + Switches.LAST.getIndex()),

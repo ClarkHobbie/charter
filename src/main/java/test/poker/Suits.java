@@ -1,5 +1,8 @@
 package test.poker;
 
+/**
+ * Card suits, ike diamonds or spades.
+ */
 public enum Suits {
     Spades("S"),
     Clubs("C"),

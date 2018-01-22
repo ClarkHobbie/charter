@@ -1,12 +1,28 @@
 package test.poker;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
-import static test.poker.Card.*;
+import static test.poker.Card.CardComparator;
 
+/**
+ * The base class that all classes inherit from.
+ *
+ * <h2>
+ *     Abstract Class
+ * </h2>
+ * To be concrete a subclass must implement the following method:
+ * <ul>
+ *     <li>{@link #isGreaterThan(PokerHand)}</li>
+ * </ul>
+ */
 public abstract class PokerHand {
+    /**
+     * Does this hand "beat" another hand?
+     *
+     * @param hand The other hand to compare against.
+     * @return true if this hand "beats" the other hand. false otherwise.
+     */
     abstract public boolean isGreaterThan (PokerHand hand);
 
     private List<Card> cards;

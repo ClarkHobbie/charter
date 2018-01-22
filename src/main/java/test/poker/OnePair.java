@@ -3,6 +3,9 @@ package test.poker;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A {@link RepresentativeHand} that has a pair.
+ */
 public class OnePair extends RepresentativeHand {
     public OnePair (List<Card> cards) {
         super(cards);

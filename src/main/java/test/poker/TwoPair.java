@@ -3,8 +3,19 @@ package test.poker;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TwoPair extends RepresentativeHand {
+/**
+ * A {@link PokerHand} that consists of two groups of cards of the same rank, with two cards in each group
+ */
+public class TwoPair extends PokerHand {
     private Card secondaryRepresentative;
+    private Card representative;
+
+    public Card getRepresentative() {
+        if (null == representative)
+            representative = basicGetRepresentative();
+
+        return representative;
+    }
 
     public TwoPair (List<Card> cards) {
         super(cards);
@@ -42,7 +53,7 @@ public class TwoPair extends RepresentativeHand {
         return  (pair.size() > 1);
     }
 
-    @Override
+
     protected Card basicGetRepresentative() {
         List<Card> pair = new ArrayList<>();
         Card firstCandidate = null;

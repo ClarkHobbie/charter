@@ -2,6 +2,9 @@ package test.poker;
 
 import java.util.List;
 
+/**
+ * A {@link RepresentativeHand} that has three cards of the same rank.
+ */
 public class ThreeOfAKind extends RepresentativeHand {
     public ThreeOfAKind (List<Card> cards) {
         super(cards);

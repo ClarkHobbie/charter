@@ -43,7 +43,6 @@ public class Poker
     }
 
     public static void main(String[] args) {
-        Game.main (args);
         testHand1IsGreaterThanHand2(
                 "8C,9C,10C,JC,QC", // straight flush
                 "6S,7H,8D,9H,10D",
@@ -65,7 +64,7 @@ public class Poker
                 false);
 
         testHand1IsGreaterThanHand2(
-                "6C,6D,6H,9C,KD",
+                "6C,6D,6H,9C,KD", // 3 of a kind
                 "2C,3C,4S,5S,6S", // straight
                 false);
 

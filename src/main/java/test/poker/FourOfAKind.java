@@ -2,16 +2,10 @@ package test.poker;
 
 import java.util.List;
 
-public class FourOfAKind extends PokerHand {
-    private Card representative;
-
-    public Card getRepresentative() {
-        if (null == representative)
-            representative = findRepresentative();
-
-        return representative;
-    }
-
+/**
+ * A {@link RepresentativeHand} that represents four cards of the same rank.
+ */
+public class FourOfAKind extends RepresentativeHand {
     public FourOfAKind (List<Card> cards) {
         super(cards);
     }
@@ -41,7 +35,7 @@ public class FourOfAKind extends PokerHand {
         }
     }
 
-    public Card findRepresentative ()
+    public Card basicGetRepresentative ()
     {
         for (Card c1 : getCards()) {
             for (Card c2 : getCards()) {
@@ -66,5 +60,4 @@ public class FourOfAKind extends PokerHand {
     public String toString() {
         return "Four of a kind{" + getCards() + "}";
     }
-
 }

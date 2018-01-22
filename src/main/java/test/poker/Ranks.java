@@ -1,5 +1,8 @@
 package test.poker;
 
+/**
+ * Card ranks like 2 and King.
+ */
 public enum Ranks {
     Ace(14, "A"),
     King(13, "K"),

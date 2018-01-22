@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+import static test.poker.Card.*;
+
 public abstract class PokerHand {
     abstract public boolean isGreaterThan (PokerHand hand);
 
@@ -79,17 +81,6 @@ public abstract class PokerHand {
         return greatest;
     }
 
-    private static class CardComparator implements Comparator<Card> {
-        public int compare(Card o1, Card o2) {
-            if (o1.isGreaterThan(o2))
-                return -1;
-            else if (o2.isGreaterThan(o1))
-                return 1;
-            else
-                return 0;
-        }
-    }
-
     public static List<Card> rankMatchesFor (Card card, List<Card> cards)  {
         List<Card> matches = new ArrayList<>();
 
@@ -109,5 +100,11 @@ public abstract class PokerHand {
         }
         
         return false;
+    }
+
+    public void sortCards ()
+    {
+        CardComparator comparator = new CardComparator();
+        getCards().sort(comparator);
     }
 }

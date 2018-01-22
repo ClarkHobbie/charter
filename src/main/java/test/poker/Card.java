@@ -7,12 +7,15 @@ import java.util.List;
 public class Card {
     public static class CardComparator implements Comparator<Card> {
         public int compare(Card c1, Card c2) {
-            if (c1.isGreaterThan(c2))
+            if (c1.isGreaterThan(c2)) {
                 return 1;
-            else if (!c1.isGreaterThan(c2) && !c2.isGreaterThan(c1))
+            }
+            else if (!c1.isGreaterThan(c2) && !c2.isGreaterThan(c1)) {
                 return 0;
-            else if (!c1.isGreaterThan(c2) && c2.isGreaterThan(c1))
+            }
+            else if (!c1.isGreaterThan(c2) && c2.isGreaterThan(c1)) {
                 return -1;
+            }
             else
                 throw new IllegalArgumentException("c1 is not greater than c2, but neither is it equal to it or less than it.");
         }
@@ -90,5 +93,16 @@ public class Card {
     @Override
     public String toString() {
         return getRank().toString() + getSuit().toString();
+    }
+
+    public static List<Card> asCards (String s) {
+        String[] sa = s.split(",");
+        List<Card> cards = new ArrayList<>();
+        for (String cardString : sa) {
+            Card card = new Card(cardString);
+            cards.add(card);
+        }
+
+        return cards;
     }
 }
